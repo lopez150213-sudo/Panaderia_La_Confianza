@@ -95,7 +95,7 @@ function enviarPorWhatsApp() {
     }
 
     // Pon aquí tu número de teléfono real (con código de país sin el +)
-    const numeroPanaderia = "50588888888"; 
+    const numeroPanaderia = "50588610963"; 
 
     let textoMensaje = "¡Hola Panadería El Buen Sabor! 🍞 Me gustaría hacer el siguiente pedido:\n\n";
     
