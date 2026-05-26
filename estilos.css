@@ -1,0 +1,233 @@
+/* Configuración base para resetear márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcf8f2; 
+    color: #4a3b32; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #8b5a2b; 
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #7f6a5b;
+}
+
+/* ==========================================================================
+   ESTILOS DE LAS PESTAÑAS (CATEGORÍAS)
+   ========================================================================== */
+.categorias-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 2px solid #dda15e;
+    background-color: white;
+    color: #bc6c25;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Estado cuando la pestaña está seleccionada */
+.tab-btn.active {
+    background-color: #dda15e;
+    color: white;
+    box-shadow: 0 4px 8px rgba(221, 161, 94, 0.3);
+}
+
+/* ==========================================================================
+   EL CATÁLOGO Y TARJETAS
+   ========================================================================== */
+.catalogo {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna por defecto en móviles */
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 40px;
+}
+
+.producto-tarjeta {
+    background-color: #ffffff;
+    border: 2px solid #e6ccb2;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    animation: aparecerSuave 0.3s ease;
+}
+
+/* Regla de oro para ocultar productos dinámicamente */
+.hidden {
+    display: none !important;
+}
+
+.producto-tarjeta h3 {
+    font-size: 1.3rem;
+    color: #6f4e37;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 0.9rem;
+    color: #8c7361;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #b17a46;
+    margin-bottom: 15px;
+}
+
+/* Etiqueta pequeña decorativa para combos */
+.badge {
+    background-color: #bc6c25;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+    align-self: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.producto-tarjeta button {
+    background-color: #dda15e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.producto-tarjeta button:hover {
+    background-color: #bc6c25;
+}
+
+/* ==========================================================================
+   CARRITO DE COMPRAS
+   ========================================================================== */
+.resumen-pedido {
+    background-color: #ffffff;
+    border: 2px dashed #b17a46;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.resumen-pedido h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fcf8f2;
+    padding-bottom: 8px;
+    color: #6f4e37;
+}
+
+#lista-pedido {
+    list-style: none;
+    margin-bottom: 20px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+#lista-pedido li {
+    font-size: 1.05rem;
+    border-bottom: 1px dashed #f4ece1;
+}
+
+.total-contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #f4ece1;
+    color: #8b5a2b;
+}
+
+#carrito-vacio {
+    color: #a39081;
+    font-style: italic;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn-whatsapp {
+    background-color: #25d366; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
+
+@keyframes aparecerSuave {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ==========================================================================
+   MEDIAS QUERIES (Adaptación de pantallas)
+   ========================================================================== */
+@media (min-width: 600px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en Tablets */
+    }
+}
+
+@media (min-width: 900px) {
+    .catalogo {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en Computadoras */
+    }
+}

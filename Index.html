@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Confianza - Pedidos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>🍞 La Confianza 🥖</h1>
+        <p>Arma tu pedido y recíbelo calientito</p>
+    </header>
+
+    <nav class="categorias-nav">
+        <button class="tab-btn active" onclick="filtrarCategoria('diario', this)">🥖 Pan Diario</button>
+        <button class="tab-btn" onclick="filtrarCategoria('velas', this)">🙏🏼 Velas y Rezos</button>
+    </nav>
+
+    <main class="catalogo">
+        
+        <div class="producto-tarjeta cat-diario">
+            <h3>Barrita</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Barrita', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Barrita Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Barrita Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Hamburguesa Pequeña</h3>
+            <p class="precio">C$ 20.00</p>
+            <button onclick="agregarAlPedido('Hamburguesa Pequeña', 20)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Hamburguesa Pequeña Doble</h3>
+            <p class="precio">C$ 35.00</p>
+            <button onclick="agregarAlPedido('Hamburguesa Pequeña Doble', 35)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Hamburguesa Mediana</h3>
+            <p class="precio">C$ 30.00</p>
+            <button onclick="agregarAlPedido('Hamburguesa Mediana', 30)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Hamburguesa Mediana Doble</h3>
+            <p class="precio">C$ 55.00</p>
+            <button onclick="agregarAlPedido('Hamburguesa Mediana Doble', 55)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Bolloncito</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Bolloncito', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Bolloncito Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Bolloncito Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Concha</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Concha', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Concha Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Concha Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Trenza Doble</h3>
+            <p class="precio">C$ 30.00</p>
+            <button onclick="agregarAlPedido('Trenza Doble', 30)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Bollón de 4</h3>
+            <p class="precio">C$ 20.00</p>
+            <button onclick="agregarAlPedido('Bollón de 4', 20)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Bollón de 4 Doble</h3>
+            <p class="precio">C$ 35.00</p>
+            <button onclick="agregarAlPedido('Bollón de 4 Doble', 35)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Bollón de 5</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Bollón de 5', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Picos</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Picos', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Picos Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Picos Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Manjar</h3>
+            <p class="precio">C$ 20.00</p>
+            <button onclick="agregarAlPedido('Manjar', 20)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Manjar Doble</h3>
+            <p class="precio">C$ 35.00</p>
+            <button onclick="agregarAlPedido('Manjar Doble', 35)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Tostado</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Tostado', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Tostado Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Tostado Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Rosca</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Rosca', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Rosca Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Rosca Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Empanada</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Empanada', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Empanada Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Empanada Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Piquito Doble</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Piquito Doble', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Polvorón Doble</h3>
+            <p class="precio">C$ 30.00</p>
+            <button onclick="agregarAlPedido('Polvorón Doble', 30)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Hot-Dog</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Hot-Dog', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Hamburguesa de Aro</h3>
+            <p class="precio">C$ 25.00</p>
+            <button onclick="agregarAlPedido('Hamburguesa de Aro', 25)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Concha Individual</h3>
+            <p class="precio">C$ 15.00</p>
+            <button onclick="agregarAlPedido('Concha Individual', 15)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Barra Cuadrada</h3>
+            <p class="precio">C$ 40.00</p>
+            <button onclick="agregarAlPedido('Barra Cuadrada', 40)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-diario">
+            <h3>Molde</h3>
+            <p class="precio">C$ 50.00</p>
+            <button onclick="agregarAlPedido('Molde', 50)">Agregar al Pedido</button>
+        </div>
+
+
+        <div class="producto-tarjeta cat-velas hidden">
+            <span class="badge">Paquete</span>
+            <h3>Combo Rezo Económico</h3>
+            <p class="descripcion">50 piezas surtidas de repostería (Churros de queso, empanaditas y piquitos).</p>
+            <p class="precio">C$ 600.00</p>
+            <button onclick="agregarAlPedido('Combo Rezo Económico (50 pz)', 600)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-velas hidden">
+            <span class="badge">Más vendido</span>
+            <h3>Combo Vela Tradicional</h3>
+            <p class="descripcion">100 piezas surtidas de repostería tradicional ideales para repartir con café.</p>
+            <p class="precio">C$ 1,150.00</p>
+            <button onclick="agregarAlPedido('Combo Vela Tradicional (100 pz)', 1150)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-velas hidden">
+            <span class="badge">Paquete Grande</span>
+            <h3>Combo Luctuoso Premium</h3>
+            <p class="descripcion">200 piezas de repostería variada fina (Empanadas dobles, piquitos y polvorones).</p>
+            <p class="precio">C$ 2,400.00</p>
+            <button onclick="agregarAlPedido('Combo Luctuoso Premium (200 pz)', 2400)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-velas hidden">
+            <h3>Bolsa de Churros de Queso</h3>
+            <p class="descripcion">Bolsa grande con 25 churros de queso crujientes de la casa.</p>
+            <p class="precio">C$ 200.00</p>
+            <button onclick="agregarAlPedido('Bolsa de Churros de Queso (25 pz)', 200)">Agregar al Pedido</button>
+        </div>
+
+        <div class="producto-tarjeta cat-velas hidden">
+            <h3>Bolsa de Piquitos Surtidos</h3>
+            <p class="descripcion">Bolsa grande con 30 piquitos dulces tostados.</p>
+            <p class="precio">C$ 220.00</p>
+            <button onclick="agregarAlPedido('Bolsa de Piquitos Surtidos (30 pz)', 220)">Agregar al Pedido</button>
+        </div>
+
+    </main>
+
+    <section class="resumen-pedido">
+        <h2>Tu Pedido:</h2>
+        
+        <ul id="lista-pedido">
+            <p id="carrito-vacio">Aún no has agregado productos.</p>
+        </ul>
+        
+        <div class="total-contenedor">
+            <h3>Total:</h3>
+            <h3>C$ <span id="total-precio">0.00</span></h3>
+        </div>
+        
+        <button class="btn-whatsapp" onclick="enviarPorWhatsApp()">💬 Enviar Pedido por WhatsApp</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
